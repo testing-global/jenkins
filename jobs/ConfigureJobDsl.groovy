@@ -1,7 +1,7 @@
 def baseUrl = "https://github.com/testing-global"
 def environments = readFileFromWorkspace('environments.txt').replaceAll('#.*', '').split()
 
-folder('tw-devops') {
+folder('tt-devops') {
     description 'for DevOps'
     properties {
         folderProperties {
@@ -17,12 +17,12 @@ folder('tw-devops') {
     
 }
 
-folder('tw-devops/jenkins') {
+folder('tt-devops/jenkins') {
     description 'Jenkins Configuration'
 }
 
 environments.each { environment ->
-    listView("tw-devops/$environment") {
+    listView("tt-devops/$environment") {
         recurse true
         jobs {
             regex "^[^/]*/$environment/apply\$"
