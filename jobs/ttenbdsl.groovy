@@ -71,4 +71,3 @@ pipelineJob('tt-devops/jenkins/sidrepo') {
             scriptPath 'jobs/sidrepodsl.groovy'
         }
     }
-}
