@@ -1,4 +1,4 @@
-node('master') {
+any {
 
     stage('Checkout git repo') 
 
