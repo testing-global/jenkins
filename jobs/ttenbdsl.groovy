@@ -6,13 +6,7 @@ def jenkinsUrl = "https://github.com/testing-global/jenkins"
 
 pipelineJob('tt-devops/jenkins/configure') {
     description 'Configure tt-devops organization'
-    properties {
-        authorizeProjectProperty {
-            strategy {
-                triggeringUsersAuthorizationStrategy()
-            }
-        }
-    }
+    
     definition {
         cpsScmFlowDefinition {
             scm {
