@@ -1,7 +1,7 @@
 node('master') {
 
     stage('Checkout git repo') 
-    }
+    
 
     stage('Create the initial tt-devops jenkins jobs') {
         jobDsl(
@@ -13,5 +13,4 @@ node('master') {
         )
         
     }
-
 }
