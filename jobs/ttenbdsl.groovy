@@ -36,12 +36,7 @@ pipelineJob('tt-devops/jenkins/configure') {
 
 pipelineJob('tt-devops/jenkins/sidrepo') {
     description 'Sid tt-devops repo'
-    properties {
-        authorizeProjectProperty {
-            strategy {
-                triggeringUsersAuthorizationStrategy()
-            }
-        }
+    
         pipelineTriggers {
             triggers {
                 upstream {
@@ -73,7 +68,7 @@ pipelineJob('tt-devops/jenkins/sidrepo') {
                     gitTool ''
                 }
             }
-            scriptPath 'jobs/sidrepo.groovy'
+            scriptPath 'jobs/sidrepodsl.groovy'
         }
     }
 }

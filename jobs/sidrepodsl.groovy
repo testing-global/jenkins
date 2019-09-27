@@ -4,13 +4,7 @@ repositories = readFileFromWorkspace(repositories).replaceAll('#.*', '').split()
 
 repositories.each { repository ->
     job = pipelineJob("tt-devops/jenkins/repositories/$repository") {
-        properties {
-            authorizeProjectProperty {
-                strategy {
-                    triggeringUsersAuthorizationStrategy()
-                }
-            }
-        }
+        
         definition {
             cpsScmFlowDefinition {
                 scm {
@@ -44,5 +38,5 @@ repositories.each { repository ->
             env 'PHASE', 'seed'
         }
     }
-    queue job
+    
 }
