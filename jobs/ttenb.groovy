@@ -1,6 +1,6 @@
 def baseUrl = "https://github.com/testing-global"
 
-node any () {
+any () {
 
     stage('Checkout git repo') {
         steps {
